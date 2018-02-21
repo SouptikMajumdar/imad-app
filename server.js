@@ -37,7 +37,7 @@ var articles={
         </p>
         `
     },
-    'article-Three': {
+    'article-three': {
         title: 'Article Three | SKM',
         heading: 'Article Three',
         date: 'Feb 21,2018',
@@ -98,21 +98,21 @@ app.get('/', function (req, res) {
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-app.get('/article-three', function(req,res){
+/*app.get('/article-three', function(req,res){
     res.sendFile(path.join(__dirname,'ui','article-three.html'));
-});
+});*/
 
 app.get('/:articleName', function(req, res){
     var articleName=req.pararms.articleName; //to extract ...express framework
     res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/article-one', function(req,res){
+/*app.get('/article-one', function(req,res){
     res.sendFile(path.join(__dirname,'ui','article-one.html'));
 });
 app.get('/article-two', function(req,res){
     res.sendFile(path.join(__dirname,'ui','article-two.html'));
-});
+});*/
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
