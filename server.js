@@ -101,9 +101,9 @@ app.get('/ui/style.css', function (req, res) {
 /*app.get('/article-three', function(req,res){
     res.sendFile(path.join(__dirname,'ui','article-three.html'));
 });*/
-
+var articleName;
 app.get('/:articleName', function(req, res){
-    var articleName=req.pararms.articleName; //to extract ...express framework
+    var articleName = req.pararms.articleName; //to extract ...express framework
     res.send(createTemplate(articles[articleName]));
 });
 
